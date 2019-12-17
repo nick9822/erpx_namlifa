@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include erpx_namlifa *.css
+recursive-include erpx_namlifa *.csv
+recursive-include erpx_namlifa *.html
+recursive-include erpx_namlifa *.ico
+recursive-include erpx_namlifa *.js
+recursive-include erpx_namlifa *.json
+recursive-include erpx_namlifa *.md
+recursive-include erpx_namlifa *.png
+recursive-include erpx_namlifa *.py
+recursive-include erpx_namlifa *.svg
+recursive-include erpx_namlifa *.txt
+recursive-exclude erpx_namlifa *.pyc
