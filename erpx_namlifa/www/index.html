@@ -1,21 +1,20 @@
-{% extends "www/master.html" %}
+{% extends "www/main.html" %}
 
 {% block title %}Namlifa{% endblock %}
 
 {% block nav %}
-<span class="landing-page-nav-links">
-<!--    <li><a class="left" href="/home" aria-current="page">Home</a></li>-->
-<!--    <li><a class="left" href="/about" aria-current="page">About beep</a></li>-->
+<!--<span class="landing-page-nav-links left">-->
+<!--        <li><a class="left" href="/home" aria-current="page">Home</a></li>-->
+<!--    <li><a class="left" href="/about" aria-current="page">About</a></li>-->
 <!--    <li><a class="left" href="/faq" aria-current="page">FAQ</a></li>-->
 <!--    <li><a class="left" href="/contact" aria-current="page">Contact Us</a></li>-->
-</span>
+<!--</span>-->
 {% if user == 'Guest' %}
-<li class="signinbutton"><a href="/signin" aria-current="page">Log in</a></li>
+    <li class="signinbutton" aria-current="page">
+        <a href="/signin">Login</a>
+    </li>
 {% endif %}
 {% if user != 'Guest' %}
-{% include "www/nav.html" %}
+    {% include "www/nav.html" %}
 {% endif %}
-{% endblock %}
-
-{% block main %}
 {% endblock %}

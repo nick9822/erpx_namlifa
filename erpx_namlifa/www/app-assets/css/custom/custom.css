@@ -9,3 +9,56 @@ NOTE:
 ------
 PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
 WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+#nav-avatar .avatar div
+{
+    line-height: 48px;
+
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    text-align: center;
+
+    border-radius: 50%; 
+    background: #ccc !important;
+}
+
+#nav-avatar .avatar .avatar-frame
+{
+    line-height: 48px;
+
+    display: block;
+
+    width: 48px;
+    height: 48px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    border-radius: 50%; 
+    -webkit-background-size: 48px 48px;
+            background-size: 48px;
+}
+
+.nav-links-small
+{
+    display: none;
+}
+
+@media only screen and (max-width: 601px)
+{
+    #nav-avatar .avatar div,
+    #nav-avatar .avatar .avatar-frame
+    {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    .nav-links
+    {
+        display: none;
+    }
+    .nav-links-small
+    {
+        display: initial;
+    }
+}

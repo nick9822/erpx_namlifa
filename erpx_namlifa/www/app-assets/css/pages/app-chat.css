@@ -500,7 +500,7 @@
 .chat-application .app-chat .chat-content .chat-content-area .chat-area .chats .chat.chat-right .chat-body .chat-text p
 {
     color: #fff; 
-    background-color: #2196f3;
+    background-color: #9c27b0;
 }
 .chat-application .app-chat .chat-content .chat-content-area .chat-area .chats .chat.chat-right .chat-body .chat-text:first-child:before
 {
@@ -519,8 +519,8 @@
          -o-transform-origin: 3px -5px;
             transform-origin: 3px -5px; 
 
-    border-top-color: #2196f3 !important;
-    border-right-color: #2196f3 !important;
+    border-top-color: #9c27b0 !important;
+    border-right-color: #9c27b0 !important;
     border-bottom-color: transparent;
     border-left-color: transparent;
     -webkit-box-shadow: 2px -2px 4px -3px rgba(0, 0, 0, .4);

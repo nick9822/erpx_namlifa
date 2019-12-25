@@ -1,12 +1,13 @@
-{% extends "www/master.html" %}
+{% extends "www/main.html" %}
 
 {% block title %}Sign in{% endblock %}
+
 {% block styles %}
-<link href="css/signin.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/app-assets/css/custom/signin.css">
 {% endblock %}
 
 {% block main %}
-<div class="col s12 row signin-card-body" style="position: relative;overflow: visible;display: block;height: 100%;">
+<div class="col s12 row signin-card-body">
     <div class="col s12">
         <div class="container">
             <section id="loading-page" class="row form-section">
@@ -14,7 +15,7 @@
                     <form class="login-form">
                         <div class="row">
                             <div class="center input-field col s12 signinlogo">
-<!--                                <img src="/images/logo.svg"/>-->
+                                <img src="/images/logo.svg"/>
                                 <h5 class="ml-4">Hang on a second!</h5>
                             </div>
                             <div class="progress">
@@ -29,8 +30,8 @@
                     <form class="login-form">
                         <div class="row">
                             <div class="center input-field col s12 signinlogo">
-<!--                                <img src="/images/logo.svg"/>-->
-                                <p class="ml-4">Welcome to Namlifa <span class="margin medium-small"><a href="#signup">Create new account</a></span></p>
+                                <img src="/images/logo.svg"/>
+                                <p class="ml-4">No account? <span class="margin medium-small"><a href="#signup">Create new account</a></span></p>
                             </div>
                         </div>
                         <div class="row margin">
@@ -69,13 +70,11 @@
                 </div>
             </section>
             <section id="signup-page" class="row form-section">
-                <div class="col s11 m8 l6 xl6 z-depth-4 card-panel border-radius-6 login-card" style="border-radius:20px!important;padding: 20px;height: 100%;">
+                <div class="col s11 m8 l6 xl6 z-depth-4 card-panel border-radius-6 login-card">
                     <form class="login-form">
                         <div class="row">
                             <div class="center input-field col s12 signinlogo">
                                 <img src="/images/logo.svg"/>
-                                <h5 class="ml-4" style="margin-bottom: 0px;">Get started with Beep!</h5>
-                                <p class="ml-4" style="margin-top: 10px;">Try 1 month free trial to explore beep’s full feature</p>
                             </div>
                         </div>
                         <div class="row margin infodetails">
@@ -389,7 +388,7 @@
                                 <!--<label for="signup-email" class="center-align">Business</label>-->
                             </div>
                         </div>
-                        <div class="row" style="margin: 20px 0px;">
+                        <div class="row">
                             <div class="input-field col s12">
                                 <button class="btn waves-effect border-round gradient-45deg-blue-indigo col s12 createbtn"
                                         type="submit" style="width: 30%;left: 35%;">
@@ -397,17 +396,16 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="row terms-privacy">
-                                <!--<p class="margin right-align medium-small"><a href="#forgot">Forgot
-                                    password ?</a></p>-->
-                                <p class="margin medium-small" style="text-align: center;">By clicking create account, you agree to our <a href="#forgot">Terms & Privacy Policy</a></p>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <p class="margin medium-small">Already have an account? <a href="#login">Log In</a></p>
+                            </div>
                         </div>
                     </form>
                 </div>
-                <p class="margin medium-small loginwords" style="position: absolute; bottom: -60px; font-size: 16px;">Already have an account? <a href="#login">Log In</a></p>
             </section>
             <section id="forgot-page" class="row form-section">
-                <div class="col s10 m8 l6 xl4 z-depth-4 card-panel border-radius-6 login-card" style="border-radius:20px!important;padding: 20px;">
+                <div class="col s10 m8 l6 xl4 z-depth-4 card-panel border-radius-6 login-card">
                     <form class="login-form">
                         <div class="row">
                             <div class="center input-field col s12 signinlogo">
@@ -442,19 +440,8 @@
         </div>
     </div>
 </div>
-<div class="col s12 m8 l6 xl4 footer-privacy">
-        <div class="container">
-            <span class="privacy"><a
-                href="/" target="_blank" style="color: #7b7b7b;">Privacy</a></span><span class="terms"><a
-                href="/" target="_blank" style="color: #7b7b7b;">Terms</a></span><span class="versionnumber">Version 1.0</span>
-        </div>
-    </div>
-{% endblock %}
-
-{% block footer %}
 {% endblock %}
 
 {% block scripts %}
 <script src="js/signin.js" defer></script>
 {% endblock %}
-

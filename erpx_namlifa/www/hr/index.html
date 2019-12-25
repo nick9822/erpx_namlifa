@@ -1,35 +1,14 @@
-{% extends "www/master.html" %}
+{% extends "www/main.html" %}
 
 {% block title %}HR Hub{% endblock %}
+
 {% block styles %}
 {% endblock %}
 
 {% block nav %}
-{% if user == 'Guest' %}
-<li class=""><a href="/signin" aria-current="page">Sign in</a></li>
-{% endif %}
-{% if user != 'Guest' %}
-{% include "www/nav.html" %}
-{% endif %}
+    {% include "www/nav.html" %}
 {% endblock %}
 
 {% block sidenav %}
-<!--sidenav-->
-{% include "www/hr/sidenav.html" %}
-{% endblock %}
-
-{% block footer %}
-<!--footer-->
-{% endblock %}
-
-{% block main %}
-<div id="main">
-</div>
-<a class="btn-floating btn-fab btn-large waves-effect waves-light blue"><i class="material-icons">message</i></a>
-{% endblock %}
-
-{% block scripts %}
-<script>
-    frappe.csrf_token = "{{ csrf_token }}";
-</script>
+    {% include "www/hr/sidenav.html" %}
 {% endblock %}
