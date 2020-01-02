@@ -21,7 +21,7 @@ $(document).ready(function () {
 	//set avatar
 	$('#nav-avatar').html(frappe.avatar());
 
-	window.hrm = (function () {
+	window.mgm = (function () {
 
 		return {
 			//frappe logout

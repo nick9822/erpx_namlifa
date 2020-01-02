@@ -9,12 +9,7 @@
 <!--    <li><a class="left" href="/faq" aria-current="page">FAQ</a></li>-->
 <!--    <li><a class="left" href="/contact" aria-current="page">Contact Us</a></li>-->
 <!--</span>-->
-{% if user == 'Guest' %}
-    <li class="signinbutton" aria-current="page">
-        <a href="/signin">Login</a>
-    </li>
-{% endif %}
-{% if user != 'Guest' %}
-    {% include "www/nav.html" %}
-{% endif %}
+
+{% include "www/nav.html" %}
+
 {% endblock %}
