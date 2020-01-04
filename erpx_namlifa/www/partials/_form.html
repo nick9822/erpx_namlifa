@@ -1,0 +1,202 @@
+<div class="row">
+
+    <div class="col s1">
+      
+    </div>
+
+    <div class="col s10">
+        <br>
+        <div class="card navbar-dark gradient-45deg-indigo-blue">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s1 hide-on-med-and-down">
+                        <span><img src="/images/logo.svg" width="100" style="padding-top:15px;"></span>
+                    </div>
+                    <div class="col s11" style="vertical-align:middle; padding-left:30px;">
+                        <h3 class="white-text">MEMBERSHIP APPLICATION FORM</h3>    
+                        <p class="white-text">Please fill in the form and submit it upon completion.</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="card-tabs grey lighten-5">
+              <ul class="tabs tabs-fixed-width z-depth-1 tabs-transparent">
+                <li class="tab"><a class="indigo-text active" href="#personalDetails">Personal Details</a></li>
+                <li class="tab"><a class="indigo-text" href="#companyDetails">Company Details</a></li>
+                <li class="tab"><a class="indigo-text" id="termsBtn" href="#terms">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <form>
+                    <div id="personalDetails">
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input placeholder="Full Name" id="full_name" name="full_name" type="text" class="validate">
+                              <label for="full_name">Full Name (as in NRIC)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                        <div class="input-field col s6">
+                            <input placeholder="" id="new_nric_no" name="new_nric_no" type="text" class="validate">
+                            <label for="new_nric_no">New NRIC No</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="" id="old_nric_no" name="old_nric_no" type="text" class="validate">
+                            <label for="old_nric_no">Old NRIC No</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="input-field col s6">
+                            <select id="sex" name="sex">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <label for="sex">Sex</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="" id="date_of_birth" name="date_of_birth" type="text" class="datepicker">
+                            <label for="date_of_birth">Date of Birth</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="input-field col s6">
+                            <textarea id="correspondence_address" name="correspondence_address" class="materialize-textarea"></textarea>
+                            <label for="correspondence_address">Correspondence Address</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="" id="postcode" name="postcode" type="text" class="validate">
+                            <label for="postcode">Postcode</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="input-field col s3">
+                            <input placeholder="" id="tel_o" name="tel_o" type="text" class="validate">
+                            <label for="tel_o">Tel(o)</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input placeholder="" id="tel_h" name="tel_h" type="text" class="validate">
+                            <label for="tel_h">Tel(H)</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input placeholder="" id="tel_hp" name="tel_hp" type="text" class="validate">
+                            <label for="tel_hp">Tel(H/P)</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input placeholder="" id="tel_fax" name="tel_fax" type="text" class="validate">
+                            <label for="tel_fax">Tel(Fax)</label>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select id="highest_qualification" name="highest_qualification">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="SPM">SPM</option>
+                                    <option value="STPM/COLLEGE">STPM/COLLEGE</option>
+                                    <option value="Tertiary & Above">Tertiary & Above</option>
+                                </select>
+                                <label for="highest_qualification">Highest Qualification Attained</label>
+                            </div>
+                            <div class="file-field input-field col s6">
+                                <div class="btn-small indigo">
+                                    <span>Photo</span>
+                                    <input id="photo" name="photo" type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div id="companyDetails">
+                        <div class="row">
+                            <div class="input-field col s6">
+                              <input placeholder="" id="date_contracted_as_agent" name="date_contracted_as_agent" type="text" class="datepicker">
+                              <label for="date_contracted_as_agent">Date Contracted as Agent</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="" id="agents_code" name="agents_code" type="text" class="validate">
+                                <label for="agents_code">Agent's Code</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select id="position" name="position">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Agent">Agent</option>
+                                    <option value="ASM">ASM</option>
+                                    <option value="USM">USM</option>
+                                    <option value="GSM">GSM</option>
+                                    <option value="AM">AM</option>
+                                    
+                                </select>
+                                <label for="highest_qualification">Position</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <select id="position_type" name="position_type">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="Full Time">Full Time</option>
+                                    <option value="Part Time">Part Time</option>
+                                    <option value="Conventional">Conventional</option>
+                                    <option value="Takaful">Takaful</option>
+                                </select>
+                                <label for="highest_qualification">Position Type</label>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="company" name="company" type="text" class="validate">
+                                    <label for="company">Company</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input placeholder="" id="agency" name="agency" type="text" class="validate">
+                                    <label for="agency">Agency</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="terms">
+                        <div class="row">
+                            <div class="col s12" style="overflow-x: scroll;">
+                                <div class="card-panel white">
+                                    <h5>Terms and Conditions</h5>
+                                    <div>Registration of membership will only be processed upon the following:-</div>
+                                    <div>- successful clearance of cheques.</div>
+                                    <div>- successful swiping of credit cards.</div>
+                                    <div>- successful clearance of company deduction.</div>
+                                    <div>
+                                        <br>
+                                    </div>
+                                    <div>For company deduction, kindly allow 30 - 40 days of processing time before delivery of membership card.</div>
+                                    <div><br></div>
+                                    <div>- Membership cards will be delivered within one month from the date of successful registration of membership.</div>
+                                    <div><br></div>
+                                    <div>Membership fees paid are non - refundable.</div>
+                                    <div><br></div>
+                                    <div>In the event of lost of membership card, a replacement fee of RM20/= will be charged for processing of a new card.</div>
+                                    <div><br></div>
+                                    <div>I agree that my signing on the NAMLIFA membership form shall constitute my acceptance of and my agreement to be bound by the terms and conditions contained in this form.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <div class="card-panel white">
+                                    <p>Sign in the box below. <i id="resetSignature" class="material-icons-outlined float-right waves-effect waves-light">refresh</i></p>
+                                    <div id="signatureWidget"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light indigo" type="submit" id="submitApplication">Submit Application
+                            <i class="material-icons right">send</i>
+                        </button>                                  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col s1">
+
+    </div>
+
+</div>

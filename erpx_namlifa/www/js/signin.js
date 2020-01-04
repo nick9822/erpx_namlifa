@@ -44,8 +44,7 @@ $(function () {
         if (show) {
             $('.form-section').toggle(false);
             $('#loading-page').toggle(true);
-        }
-        else {
+        } else {
             $('#loading-page').toggle(false);
             $(window).trigger('hashchange');
         }
@@ -91,8 +90,11 @@ $(function () {
                 }
 
                 if(message===default_message) {
+                    loading(false);
+                    $("#errorMsg").text(default_message);
                     login.set_indicator(message, 'red');
                 } else {
+                    loading(false);
                     $(window).trigger('hashchange');
                 }
 
@@ -101,7 +103,7 @@ $(function () {
 
         var login_handlers = {
             200: function(data) {
-                if (data.home_page === '/desk') { data.home_page = '/hr'; }
+                if (data.home_page === '/desk') { data.home_page = '/member'; }
                 if(data.message == 'Logged In'){
                     login.set_indicator("{{ _("Success") }}", 'green');
                     window.location.href = frappe.utils.get_url_arg("redirect-to") || data.home_page;

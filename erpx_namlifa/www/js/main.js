@@ -21,7 +21,7 @@ $(document).ready(function () {
 	//set avatar
 	$('#nav-avatar').html(frappe.avatar());
 
-	window.mgm = (function () {
+	window.erpx = (function () {
 
 		return {
 			//frappe logout
@@ -70,6 +70,26 @@ $(document).ready(function () {
 				});
 			},
 			update: function (doctype, data) {
+				var name,
+					clone = Object.assign({}, data);
+
+				return new Promise(function (resolve, reject) {
+					try {
+						name = clone.name;
+						delete clone.name; //do not update name
+						frappe.call({
+							method: FRAPPE_CLIENT + '.set_value',
+							args: {
+								doctype: doctype,
+								name: name,
+								fieldname: clone
+							},
+							callback: resolve
+						});
+					} catch (e) { reject(e); }
+				});
+			},
+			post: function (doctype, data) {
 				var name,
 					clone = Object.assign({}, data);
 

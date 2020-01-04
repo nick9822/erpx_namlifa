@@ -62,3 +62,13 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
         display: initial;
     }
 }
+
+.tabs .tab a:focus.active {
+    outline: none;
+    background-color: #8dbef1;
+    color: white !important;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: rgb(23, 96, 190);
+}
