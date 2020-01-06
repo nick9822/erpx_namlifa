@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	var FRAPPE_CLIENT = 'frappe.client',
+		BASE_URL = location.host,
 		CURRENT_URL = location.href
 			.replace('http://', '')
 			.replace('https://', '')
@@ -24,6 +25,18 @@ $(document).ready(function () {
 	window.erpx = (function () {
 
 		return {
+			showMessage: function (message) {
+				var elem = document.getElementById("generalPopUp");
+				var instance = M.Modal.getInstance(elem);
+				$("#generalInfo").html(message);
+				instance.open();
+			},
+			showError: function (message) {
+				var elem = document.getElementById("errorPopUp");
+				var instance = M.Modal.getInstance(elem);
+				$("#errorInfo").html(message);
+				instance.open();
+			},
 			//frappe logout
 			logout: function () {
 				return frappe.call({
@@ -70,26 +83,6 @@ $(document).ready(function () {
 				});
 			},
 			update: function (doctype, data) {
-				var name,
-					clone = Object.assign({}, data);
-
-				return new Promise(function (resolve, reject) {
-					try {
-						name = clone.name;
-						delete clone.name; //do not update name
-						frappe.call({
-							method: FRAPPE_CLIENT + '.set_value',
-							args: {
-								doctype: doctype,
-								name: name,
-								fieldname: clone
-							},
-							callback: resolve
-						});
-					} catch (e) { reject(e); }
-				});
-			},
-			post: function (doctype, data) {
 				var name,
 					clone = Object.assign({}, data);
 
@@ -193,17 +186,20 @@ $(document).ready(function () {
 					} catch (e) { reject(e); }
 				});
 			},
-			get_payroll: function (args) {
-				// update row into child table of single doctype
+			call_method: function (method, doctype, data) {
+				data['doctype'] = doctype;
+				var name,
+					clone = Object.assign({}, data);
 
 				return new Promise(function (resolve, reject) {
 					try {
-
 						frappe.call({
-							method: "erpx_hrm.api.get_employee_payroll_info",
-							args: args,
+							method: method,
+							args: {
+								data: data
+							},
 							callback: resolve
-						  });
+						});
 					} catch (e) { reject(e); }
 				});
 			}

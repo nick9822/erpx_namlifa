@@ -12,14 +12,47 @@ $(document).ready(function() {
 
     $("#submitApplication").on("click", function(e) {
         e.preventDefault();
+        var invalidData = document.querySelectorAll('.invalid')
+        console.log(invalidData);
+        if (invalidData.length > 0) {
+            var errLine = "<p>There are atleast "+invalidData.length+" error(s) on the page. Look out for red fields.</p>";
+            window.erpx.showError(errLine);
+            return false;
+        }
+        
         var data = {};
         var elements = [].slice.call(document.forms[0].elements);
-        packingFunction(data, elements);
-        console.log(data);
+        data = packingFunction(data, elements);
+        var res = window.erpx.call_method("erpx_namlifa.erpx_for_namlifa.erpx_utilities.create_member_application",'Member Registration', data);
+        return res
     });
 
     $("#photo").on("change", function() {
         previewFileURL(this, "#photoPreview");
+    });
+
+    $(document).on("keyup", ".cnf", function() {
+        var strval = this.value;
+        if(strval === "603") {
+            this.value = "603-";
+        } else if(strval === "6021") {
+            this.value = "6021-";
+        }
+    });
+
+    $("#new_nric_no").on("keyup", function() {
+        //XXXXXX-XX-XXXX
+        var strval = this.value;
+        if (strval.length == 6 || strval.length == 9) {
+            this.value = strval+"-";
+        }
+    });
+
+    $("#new_nric_no").on("change", function() {
+        var strval = this.value;
+        if (strval.length == 12) {
+            this.value = strval.substr(0, 7) + "-" + strval.substr(7, 9) + "-" + strval.substr(9);
+        }
     });
 });
 
@@ -60,7 +93,7 @@ function loadSignPad() {
 
 const packingFunction = (data, elements) => {
     elements.map(function(x){
-        data[x.name] = x.value;
+        if(x.name) data[x.name] = x.value;
     }); 
     return data;
 };
