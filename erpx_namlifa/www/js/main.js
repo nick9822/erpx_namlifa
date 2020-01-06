@@ -28,7 +28,7 @@ $(document).ready(function () {
 			showMessage: function (message) {
 				var elem = document.getElementById("generalPopUp");
 				var instance = M.Modal.getInstance(elem);
-				$("#generalInfo").html(message);
+				$("#messageInfo").html(message);
 				instance.open();
 			},
 			showError: function (message) {
@@ -196,6 +196,10 @@ $(document).ready(function () {
 					},
 					callback: function(res) {
 						console.log(res);
+						window.erpx.showMessage("<p>Thank you for your application</p><p>You will receive an update regarding your application shortly</p>");
+						setTimeout(() => {
+							window.location.href = '/';
+						}, 500);
 					}
 				});
 			}
