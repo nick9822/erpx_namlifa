@@ -17,6 +17,10 @@ $(document).ready(function() {
         packingFunction(data, elements);
         console.log(data);
     });
+
+    $("#photo").on("change", function() {
+        previewFileURL(this, "#photoPreview");
+    });
 });
 
 
@@ -60,3 +64,13 @@ const packingFunction = (data, elements) => {
     }); 
     return data;
 };
+
+function previewFileURL(input, imgId) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+        $(imgId).attr('src', e.target.result);
+    }        
+        reader.readAsDataURL(input.files[0]);
+    }
+}

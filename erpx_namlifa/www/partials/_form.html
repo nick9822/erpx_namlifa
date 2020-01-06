@@ -88,6 +88,10 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s6">
+                                <input placeholder="" id="Email" name="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s6">
                                 <select id="highest_qualification" name="highest_qualification">
                                     <option value="" disabled selected>Choose your option</option>
                                     <option value="SPM">SPM</option>
@@ -96,7 +100,9 @@
                                 </select>
                                 <label for="highest_qualification">Highest Qualification Attained</label>
                             </div>
-                            <div class="file-field input-field col s6">
+                        </div>    
+                        <div class="row">
+                            <div class="file-field input-field col s3">
                                 <div class="btn-small indigo">
                                     <span>Photo</span>
                                     <input id="photo" name="photo" type="file">
@@ -105,7 +111,10 @@
                                     <input class="file-path validate" type="text">
                                 </div>
                             </div>
-                        </div>                        
+                            <div class="file-field input-field col s2 center-align">
+                                <span><img src="" id="photoPreview" width="100"></span>
+                            </div>
+                        </div>                    
                     </div>
                     <div id="companyDetails">
                         <div class="row">
@@ -186,7 +195,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row center-align">
                         <button class="btn waves-effect waves-light indigo" type="submit" id="submitApplication">Submit Application
                             <i class="material-icons right">send</i>
                         </button>                                  
