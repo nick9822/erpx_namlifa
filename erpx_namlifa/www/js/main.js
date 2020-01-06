@@ -187,20 +187,16 @@ $(document).ready(function () {
 				});
 			},
 			call_method: function (method, doctype, data) {
-				data['doctype'] = doctype;
-				var name,
-					clone = Object.assign({}, data);
-
-				return new Promise(function (resolve, reject) {
-					try {
-						frappe.call({
-							method: method,
-							args: {
-								data: data
-							},
-							callback: resolve
-						});
-					} catch (e) { reject(e); }
+				console.log(data);
+				data['doctype'] = doctype;				
+				frappe.call({
+					method: method,
+					args: {
+						data: data
+					},
+					callback: function(res) {
+						console.log(res);
+					}
 				});
 			}
 		}

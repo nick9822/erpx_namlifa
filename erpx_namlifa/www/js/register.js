@@ -23,6 +23,8 @@ $(document).ready(function() {
         var data = {};
         var elements = [].slice.call(document.forms[0].elements);
         data = packingFunction(data, elements);
+        data['photo'] = window.photoFile;
+        data['signature'] = window.signFile;
         var res = window.erpx.call_method("erpx_namlifa.erpx_for_namlifa.erpx_utilities.create_member_application",'Member Registration', data);
         return res
     });
@@ -82,6 +84,7 @@ function loadSignPad() {
         $("#signatureWidget").jSignature().bind('change', function(e){ 
             var base64_img = $(e.target).jSignature("getData");
             var signFile = dataURLtoFile(base64_img, 'terms_sign.png');
+            window.signFile = base64_img;
             window.signedTerms = true;
         });
 
@@ -102,8 +105,10 @@ function previewFileURL(input, imgId) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
-        $(imgId).attr('src', e.target.result);
-    }        
+            $(imgId).attr('src', e.target.result);
+            var photoFile = dataURLtoFile(e.target.result, 'photo_image');
+            window.photoFile = e.target.result;
+        }        
         reader.readAsDataURL(input.files[0]);
     }
 }

@@ -1188,7 +1188,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2020-01-06 19:04:31.578803", 
+ "modified": "2020-01-07 00:35:33.084191", 
  "modified_by": "Administrator", 
  "module": "ERPX for Namlifa", 
  "name": "Member Registration", 
@@ -1231,7 +1231,7 @@
    "set_user_permissions": 0, 
    "share": 1, 
    "submit": 0, 
-   "write": 0
+   "write": 1
   }
  ], 
  "quick_entry": 0, 
