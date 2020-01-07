@@ -76,3 +76,33 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .avatar {
 	padding: 0px !important;
 }
+
+.brand-sidebar .logo-wrapper a.brand-logo img {
+    height: 50px;
+}
+
+.brand-sidebar .brand-logo img {
+    height: 50px;
+}
+
+.brand-sidebar .brand-logo {
+    font-size: 2.1rem;
+    line-height: 0;
+    position: absolute;
+    display: inline-flex;
+    margin: 1px 0;
+    padding: 7px 8px;
+    color: #333;
+}
+
+.brand-sidebar span.logo-text {
+    padding-top:25px;
+}
+
+@media only screen and (max-width: 992px)
+{
+    .app-logo {
+        padding-left: 55px;
+        vertical-align: top;
+    }
+}

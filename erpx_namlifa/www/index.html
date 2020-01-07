@@ -13,3 +13,31 @@
 {% include "www/nav.html" %}
 
 {% endblock %}
+
+{% block main %}
+<div class="container black">
+    <div class="row">
+        <div class="col s12">
+            <h4 class="white-text">Membership</h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4 center-align">
+            <img width="95%" src="app-assets/images/slideshow/1.jpg">
+        </div>
+        <div class="col s12 m4 center-align">
+            <img width="95%" src="app-assets/images/slideshow/2.jpg">
+        </div>
+        <div class="col s12 m4 center-align">
+            <img width="95%" src="app-assets/images/slideshow/3.jpg">
+        </div>
+    </div>  
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="/register" class="indigo btn-large indigo pulse">Join Us</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

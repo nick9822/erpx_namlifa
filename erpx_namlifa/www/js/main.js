@@ -7,7 +7,7 @@ $(document).ready(function () {
 			.replace(location.host, '')
 			.replace(/#$/, '')
 			.split('?')[0];
-
+	
 	//initialize materialize
 	$('.modal').modal();
 
