@@ -72,3 +72,7 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .tabs.tabs-transparent .indicator {
     background-color: rgb(23, 96, 190);
 }
+
+.avatar {
+	padding: 0px !important;
+}
