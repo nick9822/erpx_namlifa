@@ -106,3 +106,15 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
         vertical-align: top;
     }
 }
+
+footer.page-footer {
+    padding-left: 50px;
+}
+
+.foot-link-hov {
+    color: white;
+}
+
+footer .widget-title {
+    font-size: 2rem;
+}
